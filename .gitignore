@@ -20,13 +20,15 @@ readme.html
 /wp-content/cache/
 /wp-content/upgrade/
 
-# Plugins
-/wp-content/plugins/
-!/wp-content/plugins/custom-plugins/
+# Temas de WordPress por defecto (mantener solo nuestro tema)
+/wp-content/themes/twentytwentyfour/
+/wp-content/themes/twentytwentythree/
+/wp-content/themes/twentytwentytwo/
+/wp-content/themes/twentytwentyone/
 
-# Temas
-/wp-content/themes/
-!/wp-content/themes/producto-theme/
+# Plugins innecesarios (mantener WooCommerce y plugins personalizados)
+/wp-content/plugins/akismet/
+/wp-content/plugins/hello.php
 
 # Base de datos y logs
 *.sql
