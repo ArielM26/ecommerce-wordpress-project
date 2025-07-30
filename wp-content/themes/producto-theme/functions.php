@@ -7,7 +7,6 @@
  * @package Producto_Theme
  */
 
-// Soporte para WooCommerce
 function producto_theme_add_woocommerce_support() {
     add_theme_support( 'woocommerce' );
     add_theme_support( 'wc-product-gallery-zoom' );
@@ -39,6 +38,7 @@ function producto_theme_remove_default_widgets() {
     unregister_widget('WP_Widget_RSS');             // RSS
 }
 add_action('widgets_init', 'producto_theme_remove_default_widgets', 1);
+
 
 // Forzar layout sin sidebar
 function producto_theme_full_width_layout() {
@@ -208,4 +208,6 @@ require get_template_directory() . '/inc/customizer.php';
 if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
+
+
 
