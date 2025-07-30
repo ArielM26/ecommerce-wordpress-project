@@ -1,0 +1,35 @@
+# WordPress core
+/wp-admin/
+/wp-includes/
+wp-config.php
+wp-config-sample.php
+wp-load.php
+wp-blog-header.php
+wp-cron.php
+wp-links-opml.php
+wp-mail.php
+wp-settings.php
+wp-trackback.php
+xmlrpc.php
+index.php
+license.txt
+readme.html
+
+# Uploads y cache
+/wp-content/uploads/
+/wp-content/cache/
+/wp-content/upgrade/
+
+# Plugins
+/wp-content/plugins/
+!/wp-content/plugins/custom-plugins/
+
+# Temas
+/wp-content/themes/
+!/wp-content/themes/producto-theme/
+
+# Base de datos y logs
+*.sql
+*.sql.gz
+*.log
+error_log
