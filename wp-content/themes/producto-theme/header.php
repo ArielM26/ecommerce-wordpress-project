@@ -227,7 +227,7 @@ function inicializarValidacionRut() {
     console.log('Validación RUT configurada correctamente');
 }
 
-// Ejecutar cuando el DOM esté listo
+
 if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', inicializarValidacionRut);
 } else {
