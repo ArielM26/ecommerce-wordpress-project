@@ -21,6 +21,30 @@ if ( ! defined( '_S_VERSION' ) ) {
 	define( '_S_VERSION', '1.0.0' );
 }
 
+// Desactivar sidebar
+function producto_theme_remove_sidebar() {
+    unregister_sidebar('sidebar-1');
+}
+add_action('widgets_init', 'producto_theme_remove_sidebar', 11);
+
+// Desactivar widgets por defecto
+function producto_theme_remove_default_widgets() {
+    unregister_widget('WP_Widget_Recent_Posts');     // Entradas recientes
+    unregister_widget('WP_Widget_Recent_Comments');  // Comentarios recientes  
+    unregister_widget('WP_Widget_Archives');         // Archivos
+    unregister_widget('WP_Widget_Categories');       // Categorías
+    unregister_widget('WP_Widget_Meta');            // Meta
+    unregister_widget('WP_Widget_Search');          // Búsqueda
+    unregister_widget('WP_Widget_Text');            // Texto
+    unregister_widget('WP_Widget_RSS');             // RSS
+}
+add_action('widgets_init', 'producto_theme_remove_default_widgets', 1);
+
+// Forzar layout sin sidebar
+function producto_theme_full_width_layout() {
+    return 'full-width';
+}
+add_filter('theme_mod_page_layout', 'producto_theme_full_width_layout');
 /**
  * Sets up theme defaults and registers support for various WordPress features.
  *

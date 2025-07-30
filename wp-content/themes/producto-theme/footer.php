@@ -12,19 +12,33 @@
 ?>
 
 	<footer id="colophon" class="site-footer">
-		<div class="site-info">
-			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'producto-theme' ) ); ?>">
-				<?php
-				/* translators: %s: CMS name, i.e. WordPress. */
-				printf( esc_html__( 'Proudly powered by %s', 'producto-theme' ), 'WordPress' );
-				?>
-			</a>
-			<span class="sep"> | </span>
-				<?php
-				/* translators: 1: Theme name, 2: Theme author. */
-				printf( esc_html__( 'Theme: %1$s by %2$s.', 'producto-theme' ), 'producto-theme', '<a href="http://underscores.me/">Underscores.me</a>' );
-				?>
-		</div><!-- .site-info -->
+	<div class="footer-content">
+		<div class="footer-branding">
+			<h3 class="footer-title">
+				<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
+					<?php bloginfo( 'name' ); ?>
+				</a>
+			</h3>
+			<p class="footer-message">Proyecto de prueba - E-commerce con WordPress y WooCommerce</p>
+		</div>
+
+		<nav class="footer-navigation">
+			<?php
+			wp_nav_menu(
+				array(
+					'theme_location' => 'menu-1',
+					'menu_id'        => 'footer-menu',
+					'container'      => false,
+				)
+			);
+			?>
+		</nav>
+	</div>
+
+	<div class="site-info">
+		<p>&copy; <?php echo date('Y'); ?> <?php bloginfo( 'name' ); ?>. Todos los derechos reservados.</p>
+	</div>
+</footer>
 	</footer><!-- #colophon -->
 </div><!-- #page -->
 
